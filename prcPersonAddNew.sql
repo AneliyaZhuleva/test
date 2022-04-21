@@ -159,17 +159,11 @@ BEGIN
 		(PersonID
 		,AddressID
 		,RegistrationDate
-		,FavouriteMovieID
-		,FavouriteBookID
-		,QuizScore
 		,FavouriteFruitID)
 	SELECT
 		 @PersonID
 		,@AddressID
 		,GETDATE() AS RegistrationDate
-		,NULL AS FavouriteMovieID
-		,NULL AS FavouriteBookID
-		,NULL AS QuizScore
 		,@FruitID AS FavouriteFruitID
 
 	IF (@@TRANCOUNT > 0)
